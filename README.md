@@ -19,3 +19,21 @@ Install the dependencies using "npm install node-opcua" and "npm install serialp
 Execute "node mtServer ComX" where ComX is the com port where the scales are connected
 
 
+The OPC UA Server exposes the following tags 
+
+DecodedResponse- String- Translation of the respose code from the scales into a more friendly message
+RawRespose- String- The raw data directly from the scales
+ReadStableWeight- Boolean- Writing 1 to this tag will trigger the scales to read the STABLE weight
+ReadWeightImmediate- Boolean- Writing 1 to this tag will trigger the scales to read the weight regardless if it is stable
+ReadWeightImmediateRepeat- Boolean- Stream the weight data constantly until you send another command to stop
+Reset- Boolean- Reset scales (replies with the serial number)
+SerialNumber- String- Serial number of the connected scales
+SerialPortConnected- Boolean- 1 when scales are connected (still work in progress)
+SoftwareVersion- String- Software version of the scales
+Tare- Boolean- Writing 1 to this tag will Tare the scales
+TareWeight- Float- The Tare weight 
+TareWeightUOM- String The unit of measure for the tare weight
+Weight-Float- The weight from the scales
+WeightStable- Boolean- 1 = weight is stable, 0 = dynamic weight
+WeightUOM- String- Unit of measure for the weight
+Zero- Boolean- Writing 1 to this tag will zero the scales
