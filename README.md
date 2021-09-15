@@ -1,7 +1,7 @@
 # MettlerToledoOPCUA
 OPC UA Server for Mettler Toledo Scales
 
-Many of the various Mettler Toldeo Scales only have an RS232 interface which makes reading the data difficult if you are trying to connect the data from the scales into an MES system such as [SAP ME (Manufacturing Execution)](https://www.sap.com/uk/products/execution-mes.html) or [SAP DMC (Digital Manufacturing Cloud)](https://www.sap.com/uk/products/digital-manufacturing-cloud.html).
+Many of the various Mettler Toldeo Scales only have an RS232 interface which makes reading the data difficult if you are trying to connect the data from the scales into an MES system such as [SAP ME (Manufacturing Execution)](https://www.sap.com/uk/products/execution-mes.html) or [SAP DMC (Digital Manufacturing Cloud)](https://www.sap.com/uk/products/digital-manufacturing-cloud.html). The good thing is that they all support the same basic commands detailed in this document - [Mettler Toledo Standard Interface Commands](https://www.mt.com/dam/P5/labtec/17_Miscellaneous/RM_Advanced_and_Standard_Level_Balances_SICS_EN.pdf).
 
 This project is written in Javascript using the [Node-OPCUA](https://node-opcua.github.io/) and [SerialPort](https://serialport.io/) libraries.
 
