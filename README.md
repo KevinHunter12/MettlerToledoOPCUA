@@ -13,9 +13,9 @@ The plan is that this will also be tested on a Raspberry PI as this would provid
 
 Install Procedure:
 
-Install nodejs 14
-Clone all the files from here into your own directory
-Install the dependencies using "npm install node-opcua" and "npm install serialport"
+Install nodejs 14, 
+Clone all the files from here into your own directory, 
+Install the dependencies using "npm install node-opcua" and "npm install serialport", 
 Execute "node mtServer ComX" where ComX is the com port where the scales are connected
 
 
