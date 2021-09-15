@@ -9,6 +9,8 @@ NodeJS was selected due to its asynchronous nature and because it can be run on 
 
 The project was developed and tested using Windows 10, NodeJS 14 and a Mettler Toledo Viper BC scale.
 
+![Scales](MT_Viper_BC.jpeg)
+
 The plan is that this will also be tested on a Raspberry PI as this would provide a low cost method of adding OPC UA and ethernet capabilites.
 
 Install Procedure:
