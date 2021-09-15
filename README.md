@@ -18,8 +18,13 @@ Install Procedure:
 - Connect your scales to your PC/MAC/Raspberry PI using an RS232 port (If you have one) or a USB to serial adapter
 - Install nodejs 14
 - Clone all the files from here into your own directory
-- Install the dependencies using "npm install node-opcua" and "npm install serialport"
-- Execute "node mtServer ComX" where ComX is the com port where the scales are connected
+- Install the dependencies using
+```sh
+npm install node-opcua
+npm install serialport
+node mtServer ComX
+```
+where ComX is the com port where the scales are connected (Windows machines)
 
 
 The OPC UA Server exposes the following tags 
