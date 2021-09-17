@@ -22,9 +22,9 @@ Install Procedure:
 ```sh
 npm install node-opcua
 npm install serialport
-node mtServer ComX
+node mtServer portName baudRate
 ```
-where ComX is the com port where the scales are connected (Windows machines)
+where portName is the port where the scales are connected (eg Com5 for Windows machines) and baudRate is the baudRate your scales are configured for (eg 9600 or 19200)
 
 
 The OPC UA Server exposes the following tags 
