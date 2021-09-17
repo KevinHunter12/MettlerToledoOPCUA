@@ -1,6 +1,7 @@
 const opcua = require("node-opcua");
 let SerialPort = require('serialport');     // include the serialport library
 let	portName =  process.argv[2];            // get the port name from the command line
+let baudRate = process.argv[3];             // get the baudrate from the command line         
 
 let Weight=0;
 let WeightUOM="";
@@ -26,8 +27,8 @@ const server = new opcua.OPCUAServer({
 	 buildInfo : {
     productName: "Mettler Toledo SIC OPC UA Server",
     buildNumber: "0001",
-    buildDate: new Date(2020,8,3),
-	manufacturerName: "SAP"
+    buildDate: new Date(2021,9,17),
+	manufacturerName: "KevinHunter"
 }
    });
 
@@ -331,12 +332,16 @@ initializeScales();
 server.initialize(post_initialize);
 
 
-if (!portName) {
-  giveInstructions();
+if (!portName)  {
+  giveInstructionsPort();
 }
 
+if (!baudRate)  {
+    giveInstructionsBaud();
+  }
+
 var myPort = new SerialPort(portName, {
-    baudRate: 19200
+    baudRate: parseInt(baudRate)
   });// open the port
 var Readline = SerialPort.parsers.Readline; // make instance of Readline parser
 var parser = new Readline();                // make a new parser to read ASCII lines
@@ -435,12 +440,20 @@ function showError(error) {
   console.log('Serial port error: ' + error);
 }
 
-function giveInstructions() {
+function giveInstructionsPort() {
     console.log('you did not give a port name');
     console.log('To run this properly, type \n');
-    console.log('node mtServer.js portname\n');
+    console.log('node mtServer.js portname baudrate\n');
     process.exit(0);
 }
+
+function giveInstructionsBaud() {
+    console.log('you did not give a baud rate');
+    console.log('To run this properly, type \n');
+    console.log('node mtServer.js portname baudrate\n');
+    process.exit(0);
+}
+
 
 function sendScalesCommand(command){
     myPort.write(command+"\r\n");
