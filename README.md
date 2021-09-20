@@ -46,3 +46,4 @@ The OPC UA Server exposes the following tags
 - WeightUOM- String- Unit of measure for the weight
 - Zero- Boolean- Writing 1 to this tag will zero the scales
 
+This is the intial release where I have created my own OPC data model for the data but I plan to migrate that to to support the [OPC UA Companion Specification for Weighing](https://opcfoundation.org/markets-collaboration/weighing/)
