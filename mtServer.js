@@ -25,7 +25,7 @@ const server = new opcua.OPCUAServer({
     port: 4335, // the port of the listening socket of the server
     resourcePath: "/MT_Server", // this path will be added to the endpoint resource name
 	 buildInfo : {
-    productName: "Mettler Toledo SIC OPC UA Server",
+    productName: "MT-SIC OPC UA Server (Tag Based)",
     buildNumber: "0001",
     buildDate: new Date(2021,9,17),
 	manufacturerName: "KevinHunter"
@@ -59,7 +59,9 @@ namespace.addVariable({
             Weight = variant.value;
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead",
+    userAccessLevel: "CurrentRead"
 });
 
 namespace.addVariable({
@@ -74,7 +76,9 @@ namespace.addVariable({
             WeightUOM = variant.value;
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead",
+    userAccessLevel: "CurrentRead"
 });
 
 namespace.addVariable({
@@ -89,7 +93,9 @@ namespace.addVariable({
             Stable = variant.value;
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead",
+    userAccessLevel: "CurrentRead"
 });
 
 namespace.addVariable({
@@ -104,7 +110,9 @@ namespace.addVariable({
             RawResponse = variant.value;
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead",
+    userAccessLevel: "CurrentRead"
 });
 
 namespace.addVariable({
@@ -119,7 +127,9 @@ namespace.addVariable({
             SerialPortConnected = variant.value;
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead",
+    userAccessLevel: "CurrentRead"
 });
 
 namespace.addVariable({
@@ -141,7 +151,9 @@ namespace.addVariable({
             };
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead | CurrentWrite",
+    userAccessLevel: "CurrentRead | CurrentWrite"
 });
 namespace.addVariable({
 	componentOf: MettlerToledo,
@@ -160,7 +172,9 @@ namespace.addVariable({
             };
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead | CurrentWrite",
+    userAccessLevel: "CurrentRead | CurrentWrite"
 });
 namespace.addVariable({
 	componentOf: MettlerToledo,
@@ -179,7 +193,9 @@ namespace.addVariable({
             };
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead | CurrentWrite",
+    userAccessLevel: "CurrentRead | CurrentWrite"
 });
 
 namespace.addVariable({
@@ -194,7 +210,9 @@ namespace.addVariable({
             SerialNumber = variant.value;
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead",
+    userAccessLevel: "CurrentRead"
 });
 
 namespace.addVariable({
@@ -209,7 +227,9 @@ namespace.addVariable({
             DecodedResponse = variant.value;
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead",
+    userAccessLevel: "CurrentRead"
 });
 
 namespace.addVariable({
@@ -224,7 +244,9 @@ namespace.addVariable({
             TareWeight = variant.value;
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead",
+    userAccessLevel: "CurrentRead"
 });
 
 namespace.addVariable({
@@ -239,7 +261,9 @@ namespace.addVariable({
             TareWeightUOM = variant.value;
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead",
+    userAccessLevel: "CurrentRead"
 });
 
 namespace.addVariable({
@@ -254,7 +278,9 @@ namespace.addVariable({
             SoftwareVersion = variant.value;
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead",
+    userAccessLevel: "CurrentRead"
 });
 
 namespace.addVariable({
@@ -273,7 +299,9 @@ namespace.addVariable({
             };
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead | CurrentWrite",
+    userAccessLevel: "CurrentRead | CurrentWrite"
 });
 
 namespace.addVariable({
@@ -292,7 +320,9 @@ namespace.addVariable({
             };
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead | CurrentWrite",
+    userAccessLevel: "CurrentRead | CurrentWrite"
 });
 
 namespace.addVariable({
@@ -311,7 +341,9 @@ namespace.addVariable({
             };
             return opcua.StatusCodes.Good;
         }
-    }
+    },
+    accessLevel: "CurrentRead | CurrentWrite",
+    userAccessLevel: "CurrentRead | CurrentWrite"
 });
 
 
