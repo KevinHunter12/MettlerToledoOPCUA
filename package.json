@@ -9,9 +9,6 @@
   "author": "Kevin Hunter",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "mt-sics": "^0.0.2",
-    "mtbc-reader": "^1.2.0",
     "node-opcua": "^2.50.0",
     "serialport": "^9.2.1"
   }
